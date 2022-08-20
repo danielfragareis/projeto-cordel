@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'plump';
+    src: url(/desafio-012/estilo/Fonts/plump.otf) format(opentype);
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+/* importa a fonte direto do google fonts, sem a necessidade de baixá-la */
+
+:root {
+    --fonte1: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fonte2: 'plump';
+    --fonte3: 'Kalam';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    font-family: var(--fonte2);
+    min-height: 100vh;
+    background-color: lightgreen;
+    font-size: 3.5vw;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(82, 81, 81);
+    color: white;
+}
+
+header h1 {
+    font-family: var(--fonte2);
+    padding-top: 50px;
+    
+    /*text-transform: uppercase;
+    text-transfrom: uppercase --> Deixa todas as letras em maiúsculas */
+
+    font-variant: small-caps;
+    /* font-variant: small caps --> Deixa toodas as letras em maiúscula, porém as primeiras letras ficam em tamanho maior  */
+
+    font-size: 8vw;
+}
+
+header p {
+    padding-bottom: 50px;
+    font-variant: small-caps;
+}
+
+header  a, footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+    color: rgb(21, 36, 245);
+}
+
+section {
+    font-family: var(--fonte3), cursive;
+    padding: 10vh 0vh 10vh 4vh;
+    /* Para que amplie o espaço do txto e caibam as imagens que forem colocadas.
+    Usando a unidade de medida 'vh' deixa o espaço mais responsivo */
+
+    line-height: 2em;
+    /* Deixa o espaçamento das linhas maior, permitindo maior conforto na leitura */
+
+}
+
+section p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: dimgrey;
+    color: white;
+    background-size: cover;
+    box-shadow: inset 6px 6px 20px 0px rgba(0, 0, 0);
+    background-attachment: fixed;
+    /* background-attachment: fixed; --> Cria o efeito paralax, onde ao olar a página a imagem acompanha a rolagem */
+}
+
+section.imagem  p {
+    background-color: rgba(0, 0, 0, 0.507);
+    text-shadow: 1px 2px 0px black;
+   
+    /*width: 400px;
+     Vão permitir que a imagem seja colocada e o texto fique com uma cor de background que irá deixá-lo em destaque, sobrepondo-se à imagem */
+
+     display: inline-block;
+     padding: 5px;
+     /* Permite que não seja espremido ao usar e telas grandes, o que estava acontecendo quando se utilizava o width: 400px */
+}
+
+section#img01 {
+    background-image: url(../imagens/flores.jpg);
+    background-position: left center;
+}
+
+section#img02 {
+    background-image: url(../imagens/carta.jpg);
+    background-position: center center;
+    
+}
+
+footer {
+    background-color:rgb(82, 81, 81);
+    text-align: center;
+    padding: 10px;
+    font-size: 2.5vw;
+    font-variant: small-caps;
+}
